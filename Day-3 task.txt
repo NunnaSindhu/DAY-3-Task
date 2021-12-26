@@ -1,0 +1,117 @@
+                                                     Day-3 TASK
+1. For the given JSON iterate over all for loops (for, for in, for of, forEach)
+2. Create your own resume data in JSON format
+3. Read about the difference between window, screen and document in javascript
+4. Codekata practice
+
+1. For the given JSON iterate over all for loops (for, for in, for of, forEach)
+program:
+a)JSON Array using for of loop:
+
+let json = [{
+    "id" : "101", 
+    "name"   : "Ram",
+    "section" : "B31WD",
+    "mailid": "example1@email.com"
+},
+{
+    "id" : "102", 
+    "name"   : "Priya",
+    "section" : "B31WD",
+    "mailid": "example2@email.se"
+}];
+
+for(let value of json){  
+      console.log(value.name);
+   }
+Output:
+Ram
+Priya
+
+b)JSON Object using for in loop
+var json = {
+    jsonData:  [
+        {one: [11, 12, 13, 14, 15]},
+        {two: [21, 22, 23]},
+        {three: [31, 32]}
+    ]
+ }; 
+ for (var i=0; i<json.jsonData.length; i++) {
+    for (var key in json.jsonData[i]) {        
+            console.log(json.jsonData[i][key])
+        }
+    }
+output:
+[11, 12, 13, 14, 15]
+[21, 22, 23]
+[31, 32]
+c)JSON Object using for each loop
+let json = [{
+    "id" : "101", 
+    "name"   : "Ram",
+    "section" : "B31WD",
+    "mailid": "example1@email.com"
+},
+{
+    "id" : "102", 
+    "name"   : "Priya",
+    "section" : "B31WD",
+    "mailid": "example2@email.se"
+}];
+
+json.forEach(function(item){
+  console.log('ID: ' + item.id);
+  console.log('Name: ' + item.name);
+  console.log('section: ' + item.section);
+  console.log('mailid: ' + item.mailid);
+});
+
+Output:
+
+ID: 101
+Name: Ram
+section: B31WD
+emailid: example1@email.com
+ID: 102
+Name: Priya
+section: B31WD
+emailid: example2@email.se
+
+d)JSON Object using for each loop
+
+let json = [{
+    "id" : "101", 
+    "name"   : "Ram",
+    "section" : "B31WD",
+    "mailid": "example1@email.com"
+},
+{
+    "id" : "102", 
+    "name"   : "Priya",
+    "section" : "B31WD",
+    "mailid": "example2@email.se"
+}];
+
+for(let i=0;i<json.length;i++){  
+      console.log(json[i].id);
+   }
+Output:
+101
+102
+
+2.Create your own resume data in JSON format
+
+let json={
+    personalData:{FirstName: 'Sindhu', LastName: 'Nunna',Gender:'Female',DOB:9/6/91,Address:'Hyderabad'},
+    academicProfile:{
+                     SSC:{Yearofpassing:2006,CGPA:8.6},
+                     Inter:{Yearofpassing:2008,CGPA:9.52},
+                     BTech:{Yearofpassing:2012,CGPA:8.2},
+                     MTech:{Yearofpassing:2014,CGPA:7.8}
+                    },
+    workExperience:"Over 6 years of teaching experience in Engineering college"
+
+}
+console.log(json.personalData);//output:{FirstName: 'Sindhu', LastName: 'Nunna', Gender: 'Female', DOB: 0.016483516483516484, Address: 'Hyderabad'}
+console.log(json.academicProfile);
+console.log(json.workExperience);//output:Over 6 years of teaching experience in Engineering college
